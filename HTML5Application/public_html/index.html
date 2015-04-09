@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<body>
+
+<h1>JavaScript Can Validate Input 2</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="argument01" type="number">
+
+<button type="button" onclick="function01()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function function01() {
+    var x, text;
+
+    // Get the value of the input field with id="argument01"
+    x = document.getElementById("argument01").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text+" hello";
+}
+</script>
+
+</body>
+</html> 
